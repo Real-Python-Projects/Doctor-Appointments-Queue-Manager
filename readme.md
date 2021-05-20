@@ -1,11 +1,25 @@
-Scheduled tasks with celery
+## Scheduled tasks with celery and Redis as broker
 
 pip install celery
-sudo apt-get install rabbitmq-server
+pip install redis
 
 
-## To start rabbitMQ server
-sudo systemctl start rabbitmq-server
+## Starting Redis Server
+$ redis-server
 
-TO check if its working
-systemctl status rabbitmq-server
+To check if its working
+$ redis-cli ping
+
+will return pong if its working correctly
+## Starting Celery Services
+$ celery -A picha worker -l info
+$ celery -A picha beat -l info
+
+
+## Resource:
+https://realpython.com/asynchronous-tasks-with-django-and-celery/
+
+https://devcenter.heroku.com/articles/celery-heroku#:~:text=Celery%20is%20written%20in%20Python,message%20broker%20and%20result%20store.
+
+
+https://www.youtube.com/watch?v=fvYo6LBZUh8
