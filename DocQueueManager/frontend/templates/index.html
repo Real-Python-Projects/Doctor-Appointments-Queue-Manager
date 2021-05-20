@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <h2>Welcome</h2>
+
+    <button type="submit"><a href="{% url 'mainapp:add-patient' %}">ADD Patient</a></button>
+{% endblock body %}
+    
