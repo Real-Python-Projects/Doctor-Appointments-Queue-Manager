@@ -5,5 +5,15 @@
     <h2>Welcome</h2>
 
     <button type="submit"><a href="{% url 'mainapp:add-patient' %}">ADD Patient</a></button>
+    <button type="submit"><a href="{% url 'mainapp:current' %}">Patient In Session</a></button><br>
+    
+    <content>
+        
+        {% for patient in waiting_patients %}
+            {{ patient.name }}<br>
+        {% endfor %}
+            
+    </content>
+
 {% endblock body %}
     

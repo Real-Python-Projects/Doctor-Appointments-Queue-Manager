@@ -5,7 +5,7 @@ from django.db import models
 
 class WaitingPatients(models.Model):
     name = models.CharField(max_length=200)
-    issue = models.CharField(max_length=255)
+    issue = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     is_next = models.BooleanField(default=False)
     in_session = models.BooleanField(default=False)
