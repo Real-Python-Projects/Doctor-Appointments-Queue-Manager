@@ -8,5 +8,5 @@ def appointment_expiry(sender, instance, created, **kwargs):
     if created:
         AppointmentSession.apply_async(
             args=(instance.pk),
-            eta=datetime.utcnow()+timedelta(minutes=30)
+            eta=datetime.utcnow()+timedelta(minutes=2)
         )
