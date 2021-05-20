@@ -1,6 +1,7 @@
 ## Scheduled tasks with celery and Redis as broker
 
 pip install celery
+
 pip install redis
 
 
@@ -12,8 +13,9 @@ $ redis-cli ping
 
 will return pong if its working correctly
 ## Starting Celery Services
-$ celery -A picha worker -l info
-$ celery -A picha beat -l info
+$ celery -A DocQueueManager worker -l info
+
+$ celery -A DocQueueManager beat -l info
 
 
 ## Resource:
